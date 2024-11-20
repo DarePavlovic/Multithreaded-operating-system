@@ -2,15 +2,14 @@
 
 ## Overview
 
-This project involves the development of a small but fully functional kernel for a multithreaded operating system with time-sharing capabilities. The kernel supports thread management, memory allocation, and synchronization primitives such as semaphores. It is designed to run on a RISC-V processor architecture and is implemented in C/C++ with some assembly code.
+This project involves the development of a small but fully functional kernel for a multithreaded operating system. The kernel supports thread management, memory allocation, and synchronization primitives such as semaphores. It is designed to run on a RISC-V processor architecture and is implemented in C/C++ with some assembly code.
 
 ## Features
 
 - **Thread Management**: Create, manage, and schedule threads within the same address space.
 - **Memory Allocation**: Custom memory allocator for dynamic memory management.
 - **Synchronization**: Support for semaphores to handle synchronization between threads.
-- **Time-Sharing**: Preemptive multitasking with time-sharing capabilities.
-- **Interrupt Handling**: Asynchronous context switching on timer and keyboard interrupts.
+- **Interrupt Handling**: Asynchronous context switching on keyboard interrupts.
 - **Console I/O**: Input and output handling via a simulated console.
 
 ## Architecture
@@ -36,10 +35,6 @@ Threads are created with a specified function and argument. The kernel supports 
 ### Synchronization
 
 Semaphores are used to synchronize access to shared resources. The kernel provides functions to create, wait, signal, and destroy semaphores.
-
-### Time-Sharing
-
-The kernel implements preemptive multitasking using a timer interrupt. Threads are given time slices, and the scheduler switches between threads based on their time slices.
 
 ### Interrupt Handling
 
